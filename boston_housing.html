@@ -12177,7 +12177,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Yes, because the values inside Y, almost none is outside the range from 0.0 to 7.8 in X. The only value outside this range in X is the -0.5 value</p>
+<p><strong>Answer:</strong> Yes, because the score of 0.923 indicates that approximately 92% of the data inside the dependent variable can be predicted from the independent variable.</p>
 
 </div>
 </div>
@@ -12334,8 +12334,8 @@ Think about the pros and cons of adding more training points based on if the tra
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> I choose the first graph with the max_depth equals to 1 because the training and testing curves are converging to the center of the graph.</p>
-<p>As much more training points are being added to the training curve as much the bias is being defined, so we can observe if the bias is low or high in training and testing scores.</p>
-<p>It would be important to we notice that we can't use a very much higher number of training points because it would be difficult to distinguish what is training and testing points.</p>
+<p>As much more training points are being added the score of the training curve is being lower and the testing curve higher.</p>
+<p>Having more training points would make our model be as much more overfitting, so it is important that the number of training points would not be so great, it is good advice is that the training points 20% of the data and the testing points 80%.</p>
 
 </div>
 </div>
@@ -12660,9 +12660,8 @@ avg / total       0.99      0.99      0.99       899
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Cross-validation is a procedure used to evaluate machine learning models on a limited data sample. The training technique has a parameter k that is the number of groups that the data would be split to.</p>
-<p>This technique can be used with a grid search to obtain better results to predict unseen data.</p>
-<p>(source: <a href="https://machinelearningmastery.com/k-fold-cross-validation/">https://machinelearningmastery.com/k-fold-cross-validation/</a>)</p>
+<p><strong>Answer:</strong> k-fold cross-validation is a training technique where the k stands for the number of splits that the data would be divided. It is equivalent to the Leave One Out strategy because it uses k - 1 to make predictions, and the left one is used to test the model. The dataset is split into training and testing parts to make predictions on our data. One of the advantages of the k-fold over other validation schemas is that you can personalize the number of times that the data will be tested based on the k value, getting better results.</p>
+<p>The motivation to use cross-validation technique is that when we fit the model it would be better to predict new data that is not included.</p>
 
 </div>
 </div>
@@ -12893,7 +12892,15 @@ Predicted selling price for Client 3&#39;s home: $922,740.00
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> These prices seem reasonable as the client 2 has a home with the lowest price, the client 1 with an intermediate price and the client 3 the most expensive price. In the section Data Exploration, we could observe that the minimum price was <code>$105,000.00</code> the maximum price was <code>$1,024,800.00</code> So we can denote that there are houses with lower and better conditions that as the ones for the clients mentioned above.</p>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><p>The price of the <code>house 1</code> makes sense because its <code>RM</code> is greater than <code>house 2</code> and lower than <code>house 3</code>, its <code>LSTAT</code> is lower than <code>house 2</code> and greater than <code>house 3</code> and its <code>PRATIO</code> is lower than <code>house 2</code> and greater than <code>house 3</code>.</p>
+</li>
+<li><p>The price of the <code>house 2</code> makes sense because its <code>RM</code> is lower than <code>house 1</code> and <code>house 3</code>, its <code>LSTAT</code> is greater than <code>house 1</code> and <code>house 3</code> and its <code>PRATIO</code> is greater than <code>house 1</code> and <code>house 3</code>.</p>
+</li>
+<li><p>The price of the <code>house 3</code> makes sense because its <code>RM</code> is greater than <code>house 1</code> and <code>house 2</code>, its <code>LSTAT</code> is lower than <code>house 1</code> and <code>house 2</code> and its <code>PRATIO</code> is lower than <code>house 1</code> and <code>house 2</code>.</p>
+</li>
+</ul>
 
 </div>
 </div>
